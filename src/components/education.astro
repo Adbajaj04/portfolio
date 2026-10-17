@@ -1,0 +1,86 @@
+---
+const education = [
+  {
+    degree: "B.S Mechanical Engineering",
+    school: "University of Maryland College Park",
+    dates: "September 2023 — December 2027",
+    coursework: [
+  "Assistive Robotics",
+  "Mechatronics and Internet of Things",
+  "Electronics and Instrumentation II",
+  "Machine Design",
+  "Control Systems",
+  "Applied Machine Learning",
+  "Product Engineering and Manufacturing",
+],
+  },
+];
+---
+
+
+
+<section
+  id="education"
+  class="scroll-mt-24 border-t border-white/10 py-24 text-[#dfdfdf] sm:py-32"
+>
+  <div class="mb-12">
+    <p class="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-[#a476ff]">
+      Academic Background
+    </p>
+
+    <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">
+      Education<span class="text-[#a476ff]">.</span>
+    </h2>
+
+    <p class="mt-4 max-w-xl leading-7 text-[#dfdfdf]/60">
+      My academic background, areas of study, and educational achievements.
+    </p>
+  </div>
+
+  <div class="space-y-8">
+    {education.map((item) => (
+      <article class="relative border-l border-[#a476ff]/40 pl-6 sm:pl-8">
+        <span class="absolute -left-[5px] top-1.5 h-2.5 w-2.5 rounded-full bg-[#a476ff]" />
+
+        <p class="text-sm text-[#a476ff]">{item.dates}</p>
+
+        <h3 class="mt-2 text-xl font-semibold">
+          {item.degree}
+        </h3>
+
+        <p class="mt-1 text-[#dfdfdf]/70">
+          {item.school}
+        </p>
+
+        {item.coursework && item.coursework.length > 0 && (
+          <div class="mt-6">
+            <h4 class="text-sm font-medium text-[#dfdfdf]">
+              Relevant Coursework
+            </h4>
+
+            <div class="mt-3 flex flex-wrap gap-2">
+              {item.coursework.map((course) => (
+                <span class="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 text-xs leading-5 text-[#dfdfdf]/70 transition hover:border-[#a476ff]/50 hover:text-white">
+                  {course}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {item.coursework && item.coursework.length > 0 && (
+          <ul class="mt-5 space-y-2">
+            {item.coursework.map((detail) => (
+              <li class="flex gap-3 text-sm leading-6 text-[#dfdfdf]/60">
+                <span class="text-[#a476ff]">—</span>
+                <span>{detail}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+      </article>
+    ))}
+  </div>
+</section>
+
+

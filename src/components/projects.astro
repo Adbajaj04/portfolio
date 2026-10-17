@@ -1,0 +1,170 @@
+---
+import { getCollection } from "astro:content";
+
+const projects = await getCollection("projects");
+
+const sortedProjects = projects.sort((a, b) => {
+  const dateA = a.data.date?.getTime() ?? 0;
+  const dateB = b.data.date?.getTime() ?? 0;
+  return dateB - dateA;
+});
+---
+
+<section
+  id="projects"
+  class="projects-section scroll-mt-24 border-t border-white/10 py-24 text-[#dfdfdf] sm:py-32"
+>
+  <header class="projects-header">
+    <p class="eyebrow">MY CURRENT WORK</p>
+    <h2>Projects</h2>
+    <p>
+      A collection of things I am or have enjoyed designing, building, and learning from.
+    </p>
+  </header>
+
+  <div class="projects-grid">
+    {sortedProjects.map((project) => (
+      <a
+        class="project-card"
+        href={`/projects/${project.id.replace(/\.md$/, "")}/`}
+      >
+        {project.data.cover && (
+          <img
+            class="project-image"
+            src={project.data.cover.image}
+            alt={project.data.cover.alt}
+            loading="lazy"
+          />
+        )}
+
+        <div class="project-content">
+          <h3>{project.data.title}</h3>
+          <p>{project.data.description}</p>
+
+          <ul class="project-tags">
+            {project.data.tags.map((tag) => (
+              <li>{tag}</li>
+            ))}
+          </ul>
+
+          <span class="project-read-more">View project ↗</span>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>
+
+<style>
+  .projects-section {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    padding: 100px 0;
+    scroll-margin-top: 100px;
+  }
+
+  .projects-header {
+    margin-bottom: 32px;
+  }
+
+  .eyebrow {
+    color: var(--sec, #a476ff);
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+  }
+
+  .projects-header h2 {
+    margin: 8px 0;
+    color: var(--white, #dfdfdf);
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+
+  .projects-header > p:last-child {
+    color: #aaa;
+    line-height: 1.6;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .project-card {
+    overflow: hidden;
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid #ffffff18;
+    border-radius: 16px;
+    background: #ffffff05;
+    transition: transform 200ms ease, border-color 200ms ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-4px);
+    border-color: color-mix(in srgb, var(--sec, #a476ff) 50%, transparent);
+  }
+
+  /* Smaller project images */
+  .project-image {
+    display: block;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    background: #181818;
+  }
+
+  .project-content {
+    padding: 20px;
+  }
+
+  .project-content h3 {
+    margin: 0 0 10px;
+    color: var(--white, #dfdfdf);
+    font-size: 1.25rem;
+  }
+
+  .project-content > p {
+    margin: 0;
+    color: #aaa;
+    line-height: 1.7;
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0;
+    margin: 16px 0;
+    list-style: none;
+  }
+
+  .project-tags li {
+    padding: 5px 10px;
+    border: 1px solid #ffffff18;
+    border-radius: 999px;
+    color: #ddd;
+    font-size: 0.8rem;
+  }
+
+  .project-read-more {
+    display: inline-block;
+    margin-top: 8px;
+    color: var(--sec, #a476ff);
+  }
+
+  @media (max-width: 700px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .projects-section {
+      padding: 64px 0;
+    }
+
+    .project-image {
+      height: 170px;
+    }
+  }
+</style>

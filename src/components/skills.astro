@@ -1,0 +1,73 @@
+
+---
+const skillGroups = [
+  {
+    title: "Design, CAD, and Simulation",
+    description: "Design tools and 3D modeling",
+    skills: ["SolidWorks", "Siemens NX", "KiCad", "ANSYS", "Fusion 360", "QIDI Studio", "Tinkercad", "Multisim"],
+  },
+  {
+    title: "Development",
+    description: "Programming Languages and web technologies",
+    skills: ["Python","IOT","MicroPython","MATLAB","C++","Git","HTML","CSS", "JavaScript", "Astro", "Tailwind CSS", "Networking"],
+  },
+  {
+    title: "Manufacturing & Assembly",
+    description: "How I bring my designs to life",
+    skills: ["3D-printing", "Wiring", "Soldering", "Crimping", "Woodworking", "Machine Maintenance", "Computer Assembly", "Laser Cutting"],
+  },
+  {
+    title: "Hardware",
+    description: "Microcontrollers and other hardwae",
+    skills: ["Esp32 Boards","Arduino Boards","Raspberry Pi"],
+  },
+];
+---
+
+<section
+  id="skills"
+  class="scroll-mt-24 border-t border-white/10 py-24 text-[#dfdfdf] sm:py-32"
+	>
+  <div class="mb-12">
+  <p class="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-[#a476ff]">
+    What I work with
+  </p>
+
+  <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">
+    Skills <span class="text-[#a476ff]">&amp;</span> Technologies
+  </h2>
+
+  <p class="mt-4 max-w-xl text-sm leading-6 text-[#dfdfdf]/60 sm:text-base">
+    The tools and technologies I use to bring ideas to life.
+  </p>
+</div>
+
+  <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+    {skillGroups.map((group, index) => (
+      <article
+        class="group rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition duration-300 hover:border-[#a476ff]/50 hover:bg-white/[0.04]"
+      >
+        <div class="mb-6 flex items-center justify-between">
+          <span class="text-sm font-medium text-[#a476ff]">
+            0{index + 1}
+          </span>
+          <span class="h-px w-10 bg-[#a476ff]/50 transition-all duration-300 group-hover:w-16"></span>
+        </div>
+
+        <h3 class="text-lg font-semibold">{group.title}</h3>
+        <p class="mt-2 text-sm leading-6 text-[#dfdfdf]/50">
+          {group.description}
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-2">
+          {group.skills.map((skill) => (
+            <span class="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 text-xs text-[#dfdfdf]/80 transition hover:border-[#a476ff]/40 hover:text-white">
+              {skill}
+            </span>
+          ))}
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
+	

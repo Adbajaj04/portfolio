@@ -1,0 +1,148 @@
+---
+const experiences = [
+  {
+    subject: "Vacuum System Redesign",
+    role: "Project Manager",
+    dates: "August 2026 — Present",
+    description:
+      "Leading a team of 6 engineering students to dissect, redesign, and improve a commercially designed vacuum cleaner.",
+    achievements: [
+      "Directing multi-system design efforts including suction performance, energy efficiency, thermal management, power consumption, and sustainability at minimum manufacturing cost.",
+      "Coordinating team members, establishing project priorities, delegating responsibilities, tracking progress, and integrating individual design efforts into a final system deliverable.",
+    ],
+    technologies: [
+      "Python",
+      "SolidWorks",
+      "Microsoft Office",
+      "Wiring",
+      "Soldering",
+    ],
+  },
+  {
+  subject: "6 DOF Robotic Arm",
+    role: "Private Project Endeavor",
+    dates: "September 2025 — December 2025",
+    description:
+      "Built and integrated a multi-degree-of-freedom robotic arm assembly with 43 3D-printed components and commercial hardware.",
+    achievements: [
+      "Performed tolerancing on 3D-printed parts over 4 iterations to accommodate commercial hardware from various vendors and account for non-standard dimensions.",
+      "Designed wiring channels within linkages to neatly organize and later identify wiring, which was soldered and crimped for desired dimensions, for servo components.",
+	  "Diagnosed and resolved potentiometer input discrepancies within 4 percent of error.",
+	  ],
+    technologies: [
+      "Arduino",
+      "SolidWorks",
+      "Microsoft Office",
+      "Wiring",
+      "Soldering",
+	  "Crimping",
+	  "3D-printing",
+	  "QIDI Studio",
+    ],
+  },
+  {
+  subject: "Material Identification Rover",
+    role: "Systems and Navigation Lead",
+    dates: "January 2024 — May 2024",
+    description:
+      "Programmed navigation in Arduino IDE which utilized force sensors to accurately identify the weight and material properties of cubic matter.",
+    achievements: [
+      "Calculated and specced out motors for optimal traction, powder, and speed of an autonomous vehicle.",
+      "Corrected motor and Arduino board interfacing to sync Aruco marker tracing and streamline navigation process to under 5 minutes.",
+	  ],
+    technologies: [
+      "Arduino",
+      "SolidWorks",
+	  "Fusion360",
+      "Microsoft Office",
+      "Wiring",
+      "Soldering",
+	  "Crimping",
+	  "3D-printing",
+	  "Woodworking",
+	  "Laser Cutting",
+    ],
+  },
+  {
+  subject: "Cube Satellite Team",
+    role: "CAD and Structures Development Member",
+    dates: "September 2023 — February 2024",
+    description:
+      "Helped develop a student CubeSat platform with a GPS tracking payload as a part of NASA mission.",
+    achievements: [
+      "Engaged in FEA to estimate performance prior to fabrication and simulate duress under 10G load.",
+      "Utilized Siemens NX to optimize structural supports and systems of Cube Satellite, optimizing the functionality of onboard electronics and reducing overall weight.",
+	  ],
+    technologies: [
+      "Siemens NX",
+	  "SolidWorks",
+	  "Ansys",
+	  "Microsoft Office",
+    ],
+  },
+];
+---
+
+
+<section
+  id="experience"
+  class="scroll-mt-24 border-t border-white/10 py-24 text-[#dfdfdf] sm:py-32"
+>
+  <div class="mb-12">
+    <p class="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-[#a476ff]">
+      Technical Background
+    </p>
+
+    <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">
+      Experience<span class="text-[#a476ff]">.</span>
+    </h2>
+
+    <p class="mt-4 max-w-xl leading-7 text-[#dfdfdf]/60">
+      My technical experience, group collaboration, and hands-on work.
+    </p>
+  </div>
+
+  <div class="space-y-10">
+    {experiences.map((item) => (
+      <article class="relative border-l border-[#a476ff]/40 pl-6 sm:pl-8">
+        <span class="absolute -left-[5px] top-1.5 h-2.5 w-2.5 rounded-full bg-[#a476ff]" />
+
+        <p class="text-sm text-[#a476ff]">{item.dates}</p>
+
+        <h3 class="mt-2 text-xl font-semibold">
+          {item.subject}
+        </h3>
+
+        <p class="mt-1 text-[#dfdfdf]/70">
+          {item.role}
+        </p>
+
+        <p class="mt-4 text-sm leading-7 text-[#dfdfdf]/60">
+          {item.description}
+        </p>
+
+        {item.achievements && item.achievements.length > 0 && (
+          <ul class="mt-4 space-y-3">
+            {item.achievements.map((achievement) => (
+              <li class="flex gap-3 text-sm leading-6 text-[#dfdfdf]/70">
+                <span class="text-[#a476ff]">↳</span>
+                <span>{achievement}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {item.technologies && item.technologies.length > 0 && (
+          <div class="mt-5 flex flex-wrap gap-2">
+            {item.technologies.map((technology) => (
+              <span class="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-1.5 text-xs text-[#dfdfdf]/70 transition hover:border-[#a476ff]/50 hover:text-white">
+                {technology}
+              </span>
+            ))}
+          </div>
+        )}
+      </article>
+    ))}
+  </div>
+</section>
+	

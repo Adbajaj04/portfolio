@@ -1,0 +1,262 @@
+
+---
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title="About | Aditya Bajaj">
+  <main class="min-h-screen text-[var(--white)]">
+    <section class="mx-auto max-w-5xl px-4 py-16 md:px-0 md:py-24">
+      <!-- Back to portfolio -->
+      <a
+        href="/#home"
+        class="mb-10 inline-flex items-center gap-2 text-sm text-[var(--white-icon)] transition hover:text-[var(--sec)]"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="size-4"
+          aria-hidden="true"
+        >
+          <path d="m15 18-6-6 6-6" />
+        </svg>
+        Back to portfolio
+      </a>
+
+      <!-- Page heading -->
+      <header class="mb-14 border-b border-white/10 pb-10">
+        <p
+          class="mb-4 text-sm font-medium uppercase tracking-[0.25em] text-[var(--sec)]"
+        >
+          Get to know me
+        </p>
+
+        <h1 class="text-4xl font-semibold tracking-tight md:text-6xl">
+          About <span class="shiny-sec">Me</span>
+        </h1>
+
+        <p
+          class="mt-6 max-w-3xl text-lg leading-8 text-[var(--white-icon)]"
+        >
+          I'm a mechanical engineering student, currently studying at the University Of Maryland College Park. I am passionate about robotics, automation,
+          and bringing ideas to life through engineering. 
+        </p>
+      </header>
+
+      <!-- Main content -->
+      <div class="grid gap-12 md:grid-cols-[1.5fr_1fr] md:gap-16">
+        <div class="space-y-10">
+          <section>
+            <h2 class="mb-4 text-2xl font-semibold tracking-tight">
+              What I Do
+            </h2>
+
+            <div
+              class="space-y-4 text-base leading-8 text-[var(--white-icon)]"
+            >
+              <p>
+                I'm interested in understanding how complete engineering
+                systems work, from individual components to fully integrated
+                machines. I enjoy combining design, practical problem-solving,
+                and technical experimentation to develop solutions that work
+                beyond the drawing board.
+              </p>
+
+              <p>My core technical areas include:</p>
+
+              <ul
+                class="list-disc space-y-4 pl-6 marker:text-[var(--sec)]"
+              >
+                <li>
+                  <strong class="font-semibold text-[var(--white)]">
+                    Mechanical Design &amp; CAD: </strong> I enjoy designing components and assemblies using tools
+                  such as SolidWorks, Siemens NX, Fusion 360, and ANSYS,
+                  with an emphasis on practical design and manufacturability.
+                </li>
+
+                <li>
+                  <strong class="font-semibold text-[var(--white)]">
+                    Robotics &amp; Automation: </strong> I'm interested in robotic systems, automation technologies,
+                  and the integration of mechanical components, electronics,
+                  and software to create reliable, functional systems.
+                </li>
+
+                <li>
+                  <strong class="font-semibold text-[var(--white)]">
+                    Fabrication &amp; Prototyping:  </strong>  I enjoy turning digital designs into physical parts through
+                  3D printing, laser cutting, wiring, soldering, and other
+                  fabrication and assembly techniques.
+                </li>
+
+                <li>
+                  <strong class="font-semibold text-[var(--white)]">
+                    Hardware Integration &amp; Troubleshooting: </strong> I like working directly with hardware, assembling systems,
+                  diagnosing issues, and refining designs through testing
+                  and iteration.
+                </li>
+              </ul>
+
+
+              <p>
+                I built this portfolio to primarily showcase what I am working on currently.
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="space-y-6">
+          <!-- Areas of interest -->
+          <div
+            class="rounded-2xl border border-white/10 bg-white/[0.02] p-6"
+          >
+            <h2 class="mb-5 text-lg font-semibold">
+              Areas of Interest
+            </h2>
+
+            <ul class="space-y-4 text-sm text-[var(--white-icon)]">
+              <li class="flex items-start gap-3">
+                <span
+                  class="mt-2 size-2 shrink-0 rounded-full bg-[var(--sec)]"
+                ></span>
+                Robotics &amp; Automation
+              </li>
+
+              <li class="flex items-start gap-3">
+                <span
+                  class="mt-2 size-2 shrink-0 rounded-full bg-[var(--sec)]"
+                ></span>
+                Mechanical Design &amp; Simulation
+              </li>
+
+              <li class="flex items-start gap-3">
+                <span
+                  class="mt-2 size-2 shrink-0 rounded-full bg-[var(--sec)]"
+                ></span>
+                Rapid Prototyping &amp; Fabrication
+              </li>
+
+              <li class="flex items-start gap-3">
+                <span
+                  class="mt-2 size-2 shrink-0 rounded-full bg-[var(--sec)]"
+                ></span>
+                Mechatronics &amp; Hardware Integration
+              </li>
+
+              <li class="flex items-start gap-3">
+                <span
+                  class="mt-2 size-2 shrink-0 rounded-full bg-[var(--sec)]"
+                ></span>
+                Testing &amp; Troubleshooting
+              </li>
+            </ul>
+          </div>
+
+          <!-- Explore work -->
+          <div
+            class="rounded-2xl border border-white/10 bg-white/[0.02] p-6"
+          >
+            <h2 class="mb-4 text-lg font-semibold">
+              Explore My Work
+            </h2>
+
+            <p
+              class="mb-5 text-sm leading-7 text-[var(--white-icon)]"
+            >
+              Take a closer look at my engineering projects, technical
+              experience, and resume.
+            </p>
+
+            <div class="flex flex-wrap gap-3">
+              <a
+                href="/#projects"
+                class="inline-flex items-center gap-2 rounded-xl bg-[var(--sec)] px-4 py-3 text-sm font-medium text-white transition hover:opacity-85"
+              >
+                View Projects
+                <span aria-hidden="true">→</span>
+              </a>
+
+              <a
+                href="/resume"
+                class="inline-flex items-center gap-2 rounded-xl border border-white/10 px-4 py-3 text-sm font-medium text-[var(--white)] transition hover:border-[var(--sec)]"
+              >
+                View Resume
+              </a>
+            </div>
+          </div>
+
+          
+<!-- Contact -->
+<div
+  class="rounded-2xl border border-[var(--sec)]/30 bg-[var(--sec)]/[0.05] p-6"
+>
+  <h2 class="mb-3 text-lg font-semibold">
+    Let's Connect
+  </h2>
+
+  <p class="mb-5 text-sm leading-7 text-[var(--white-icon)]">
+    Have a question or want to discuss engineering, robotics,
+    or a project? I'd be happy to hear from you.
+  </p>
+
+  <div class="flex flex-col gap-3">
+    <!-- Email button -->
+    <a
+      href="mailto:adbajaj04@gmail.com"
+      class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[var(--sec)] px-4 py-3 text-sm font-medium text-white transition hover:opacity-85"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        class="size-5 shrink-0"
+        aria-hidden="true"
+      >
+        <path
+          d="m18.73 5.41l-1.28 1L12 10.46L6.55 6.37l-1.28-1A2 2 0 0 0 2 7.05v11.59A1.36 1.36 0 0 0 3.36 20h3.19v-7.72L12 16.37l5.45-4.09V20h3.19A1.36 1.36 0 0 0 22 18.64V7.05a2 2 0 0 0-3.27-1.64"
+        />
+      </svg>
+      Send me an email
+    </a>
+
+    <!-- LinkedIn button -->
+    <a
+      href="https://linkedin.com/in/adityanbajaj"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm font-medium text-[var(--white)] transition hover:border-[var(--sec)] hover:bg-[var(--sec)]/10"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        class="size-5 shrink-0"
+        aria-hidden="true"
+      >
+        <path
+          d="M18.3362 18.339H15.6707V14.1622C15.6707 13.1662 15.6505 11.8845 14.2817 11.8845C12.892 11.8845 12.6797 12.9683 12.6797 14.0887V18.339H10.0142V9.75H12.5747V10.9207H12.6092C12.967 10.2457 13.837 9.53325 15.1367 9.53325C17.8375 9.53325 18.337 11.3108 18.337 13.6245V18.339H18.3362ZM7.00373 8.57475C6.14573 8.57475 5.45648 7.88025 5.45648 7.026C5.45648 6.1725 6.14648 5.47875 7.00373 5.47875C7.85873 5.47875 8.55173 6.1725 8.55173 7.026C8.55173 7.88025 7.85798 8.57475 7.00373 8.57475ZM8.34023 18.339H5.66723V9.75H8.34023V18.339ZM19.6697 3H4.32923C3.59498 3 3.00098 3.5805 3.00098 4.29675V19.7033C3.00098 20.4202 3.59498 21 4.32923 21H19.6675C20.401 21 21.001 20.4202 21.001 19.7033V4.29675C21.001 3.5805 20.401 3 19.6675 3H19.6697Z"
+        />
+      </svg>
+      Add me on LinkedIn
+    </a>
+  </div>
+</div>
+	  </aside>
+      </div>
+
+      <!-- Footer navigation -->
+      <footer class="mt-16 border-t border-white/10 pt-8">
+        <a
+          href="/#home"
+          class="inline-flex items-center gap-2 text-sm text-[var(--white-icon)] transition hover:text-[var(--sec)]"
+        >
+          ← Return to the main portfolio
+        </a>
+      </footer>
+    </section>
+  </main>
+</Layout>

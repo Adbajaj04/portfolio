@@ -1,0 +1,119 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .markdown-content {
+    color: #dfdfdf;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+  }
+
+  .markdown-content h1 {
+    margin-bottom: 1rem;
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+  }
+
+  .markdown-content h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid rgb(255 255 255 / 12%);
+    font-size: 1.75rem;
+    font-weight: 700;
+  }
+
+  .markdown-content h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    color: #a476ff;
+    font-size: 1.35rem;
+    font-weight: 600;
+  }
+
+  .markdown-content p {
+    margin: 1rem 0;
+  }
+
+  .markdown-content a {
+    color: #a476ff;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: opacity 180ms ease;
+  }
+
+  .markdown-content a:hover {
+    opacity: 0.75;
+  }
+
+  .markdown-content ul,
+  .markdown-content ol {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .markdown-content ul {
+    list-style: disc;
+  }
+
+  .markdown-content ol {
+    list-style: decimal;
+  }
+
+  .markdown-content li {
+    margin: 0.4rem 0;
+    padding-left: 0.2rem;
+  }
+
+  .markdown-content img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 1.5rem 0;
+    border-radius: 0.75rem;
+  }
+
+  .markdown-content blockquote {
+    margin: 1.5rem 0;
+    padding: 0.75rem 1rem;
+    border-left: 3px solid #a476ff;
+    background: rgb(255 255 255 / 4%);
+    color: #bdbdbd;
+  }
+
+  .markdown-content hr {
+    margin: 2rem 0;
+    border: 0;
+    border-top: 1px solid rgb(255 255 255 / 15%);
+  }
+
+  .markdown-content pre {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    overflow-x: auto;
+    border-radius: 0.75rem;
+    background: #1a1a1a;
+  }
+
+  .markdown-content code {
+    font-size: 0.9em;
+  }
+
+  .markdown-content table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+  }
+
+  .markdown-content th,
+  .markdown-content td {
+    padding: 0.75rem;
+    border: 1px solid rgb(255 255 255 / 15%);
+    text-align: left;
+  }
+}
